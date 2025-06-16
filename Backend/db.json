@@ -1,0 +1,37 @@
+{
+  "users": [
+    {
+      "id": "0",
+      "username": "admin",
+      "email": "admin@master",
+      "password": "123456",
+      "isAdmin": true
+    },
+    {
+      "id": "Aiw0dBglqB55JxxaCNw3N",
+      "username": "admin",
+      "email": "admin@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": "a5be5eb8TwJAEYI5pMf-U",
+      "username": "kuttu777",
+      "email": "a@a.com",
+      "password": "123456",
+      "admin": false
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "title": "Wireless Bluetooth Headphones",
+      "price": 49.99,
+      "description": "High-quality wireless headphones with noise cancellation and long battery lifeupdated",
+      "category": "Electronics",
+      "image": "https://images.meesho.com/images/products/441972461/wqvne_1200.jpg"
+    }
+  ],
+  "carts": {
+    "name": "typicode"
+  }
+}
