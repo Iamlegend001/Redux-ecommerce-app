@@ -3,9 +3,11 @@
     {
       "id": "0",
       "username": "admin",
-      "email": "admin@master",
+      "email": "admin@kuttu",
       "password": "123456",
-      "isAdmin": true
+      "isAdmin": true,
+      "users": null,
+      "Username": "admin"
     },
     {
       "id": "Aiw0dBglqB55JxxaCNw3N",
@@ -14,9 +16,9 @@
       "password": "123456"
     },
     {
-      "id": "a5be5eb8TwJAEYI5pMf-U",
-      "username": "kuttu777",
-      "email": "a@a.com",
+      "id": "NanMHuJbzRLMrixjTihnQ",
+      "username": "Modi",
+      "email": "modi@chor.com",
       "password": "123456",
       "admin": false
     }

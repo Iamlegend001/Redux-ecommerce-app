@@ -6,7 +6,7 @@ import ProductCard from '../Components/ProductCard';
 
 const Products = () => {
   const products = useSelector((state) => state.productReducers.products);
-  console.log(products);
+
 
   return (
     <div className="container mx-auto px-4 py-8">

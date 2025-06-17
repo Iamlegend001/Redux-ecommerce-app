@@ -4,13 +4,13 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { asynLogoutuser } from "../Store/Actions/userActions";
 
 const Navbar = () => {
-  const dispatch = useDispatch()
-  const navigate = useNavigate()
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
   const user = useSelector((state) => state.userReducers.users);
- const LogoutHandler = ()=>{
-  dispatch(asynLogoutuser())
-  navigate("/")
- }
+  // const LogoutHandler = () => {
+  //   dispatch(asynLogoutuser());
+  //   navigate("/");
+  // };
   return (
     <nav className="bg-gradient-to-r from-gray-800 to-gray-900 shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -27,7 +27,7 @@ const Navbar = () => {
             >
               Home
             </NavLink>
-            <NavLink
+            {/* <NavLink
               to="/products"
               className={({ isActive }) =>
                 `text-gray-100 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
@@ -36,26 +36,40 @@ const Navbar = () => {
               }
             >
               Products
-            </NavLink>
+            </NavLink> */}
           </div>
 
           {/* Right side navigation */}
           <div className="flex items-center space-x-4">
             {user ? (
-              <> <NavLink
-                to="/admin/create-product"
-                className={({ isActive }) =>
-                  `text-gray-100 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
-                    isActive ? "bg-gray-700 shadow-inner" : ""
-                  }`
-                }
-              >
-                Create Product
-              </NavLink>
-              <button onClick={LogoutHandler} className="text-white">Logout</button>
+              <>
+                {user?.isAdmin && (
+                  <NavLink
+                    to="/admin/create-product"
+                    className={({ isActive }) =>
+                      `text-gray-100 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
+                        isActive ? "bg-gray-700 shadow-inner" : ""
+                      }`
+                    }
+                  >
+                    Create Product
+                  </NavLink>
+                )}
+
+                <NavLink
+                  to="/admin/user-profile"
+                  className={({ isActive }) =>
+                    `text-gray-100 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
+                      isActive ? "bg-gray-700 shadow-inner" : ""
+                    }`
+                  }
+                >
+                  Settings
+                </NavLink>
+                {/* <button onClick={LogoutHandler} className="text-white">
+                  Logout
+                </button> */}
               </>
-
-
             ) : (
               <>
                 <NavLink

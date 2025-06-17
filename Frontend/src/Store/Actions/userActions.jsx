@@ -9,10 +9,22 @@ export const asyncRegisterUser = (user) => async (dispatch, getState) => {
     console.log(error);
   }
 };
+export const asyncUpdateUser = (id, user) => async (dispatch, getState) => {
+  try {
+    const { data } = await axios.patch("/users/" + id, user);
+
+    localStorage.setItem("user", JSON.stringify(data));
+    dispatch(asynCurrentuser())
+  } catch (error) {
+    console.log(error);
+  }
+};
 
 export const asynLoginuser = (user) => async (dispatch, getState) => {
   try {
-    const { data } = await axios.get(`/users?email=${user.email}&password=${user.password}`);
+    const { data } = await axios.get(
+      `/users?email=${user.email}&password=${user.password}`
+    );
     console.log(data[0]);
 
     if (data.length > 0) {
@@ -21,7 +33,6 @@ export const asynLoginuser = (user) => async (dispatch, getState) => {
     } else {
       console.log("Invalid credentials");
     }
-
   } catch (error) {
     console.log(error);
   }
@@ -41,6 +52,16 @@ export const asynCurrentuser = () => async (dispatch, getState) => {
     const user = JSON.parse(localStorage.getItem("user"));
     if (user) dispatch(loadUser(user));
     else console.log("User not found");
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const asyncDeleteUser = (id) => async (dispatch, getState) => {
+  try {
+    await axios.delete("/users/" + id);
+
+    dispatch(asynLogoutuser());
   } catch (error) {
     console.log(error);
   }
