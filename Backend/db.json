@@ -7,20 +7,28 @@
       "password": "123456",
       "isAdmin": true,
       "users": null,
-      "Username": "admin"
-    },
-    {
-      "id": "Aiw0dBglqB55JxxaCNw3N",
-      "username": "admin",
-      "email": "admin@gmail.com",
-      "password": "123456"
+      "Username": "admin",
+      "cart": [
+        {
+          "product": {
+            "id": "SE9qeauIOtqF2b9XYz2QC",
+            "title": " HP Omen 16 Max, Intel Core Ultra 9 275HX processor,16GB NVIDIA RTX 5080 Gaming AI",
+            "price": "3500",
+            "description": "24-core, 24-thread CPU with 36MB L3 cache. Turbo up to 5.4GHz. Delivers elite multitasking, real-time AI acceleration, and lightning-fast responsiveness for AAA gaming, 3D rendering, and demanding creative workflows.",
+            "category": "Laptop",
+            "image": "https://m.media-amazon.com/images/I/71UmfFG5RAL._SL1500_.jpg"
+          },
+          "quantity": 2
+        }
+      ]
     },
     {
       "id": "NanMHuJbzRLMrixjTihnQ",
       "username": "Modi",
       "email": "modi@chor.com",
       "password": "123456",
-      "admin": false
+      "isAdmin": false,
+      "cart": []
     }
   ],
   "products": [
@@ -31,6 +39,14 @@
       "description": "High-quality wireless headphones with noise cancellation and long battery lifeupdated",
       "category": "Electronics",
       "image": "https://images.meesho.com/images/products/441972461/wqvne_1200.jpg"
+    },
+    {
+      "id": "SE9qeauIOtqF2b9XYz2QC",
+      "title": " HP Omen 16 Max, Intel Core Ultra 9 275HX processor,16GB NVIDIA RTX 5080 Gaming AI",
+      "price": "3500",
+      "description": "24-core, 24-thread CPU with 36MB L3 cache. Turbo up to 5.4GHz. Delivers elite multitasking, real-time AI acceleration, and lightning-fast responsiveness for AAA gaming, 3D rendering, and demanding creative workflows.",
+      "category": "Laptop",
+      "image": "https://m.media-amazon.com/images/I/71UmfFG5RAL._SL1500_.jpg"
     }
   ],
   "carts": {

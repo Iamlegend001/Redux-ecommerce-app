@@ -6,8 +6,8 @@ import { asyncRegisterUser } from "../Store/Actions/userActions";
 import { useDispatch } from "react-redux";
 
 const Register = () => {
-  const dispatch = useDispatch()
-  const navigate = useNavigate()
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
   const {
     handleSubmit,
     register,
@@ -17,11 +17,12 @@ const Register = () => {
 
   const registerHandler = (user) => {
     user.id = nanoid();
-    user.admin = false
+    user.isAdmin = false;
+    user.cart = [];
     console.log(user);
     reset();
-    dispatch(asyncRegisterUser(user))
-    navigate("/login")
+    dispatch(asyncRegisterUser(user));
+    navigate("/login");
   };
 
   return (

@@ -6,6 +6,7 @@ import {
   asyncDeletehandler,
   asyncUpdateProduct,
 } from "../../Store/Actions/productActions";
+import { asyncUpdateUser } from "../../Store/Actions/userActions";
 
 const ProductDetails = () => {
   const { id } = useParams();
@@ -15,8 +16,6 @@ const ProductDetails = () => {
   } = useSelector((state) => state);
 
   const product = products?.find((product) => product.id.toString() === id);
-  console.log(product, users);
-
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -25,11 +24,7 @@ const ProductDetails = () => {
     register,
     reset,
     formState: { errors },
-  } = useForm({
-    defaultValues: {
-      product,
-    },
-  });
+  } = useForm();
 
   useEffect(() => {
     if (product) {
@@ -38,12 +33,27 @@ const ProductDetails = () => {
   }, [product, reset]);
 
   const updateProductHandler = (productData) => {
-    console.log(productData);
     dispatch(asyncUpdateProduct(id, productData));
   };
-  const deleteHandeler = () => {
+
+  const addtoCartHandler = (product) => {
+    // Clone user safely and ensure cart is an array
+    const copyUser = { ...users, cart: [...users.cart] };
+    const x = copyUser.cart.findIndex((c) => c?.product?.id == product.id);
+    if (x == -1) {
+      copyUser.cart.push({ product, quantity: 1 });
+    } else {
+      copyUser.cart[x] = { product, quantity: copyUser.cart[x].quantity + 1 };
+    }
+    console.log(copyUser);
+
+    dispatch(asyncUpdateUser(copyUser.id, copyUser));
+    navigate("/cart");
+  };
+
+  const deleteHandler = () => {
     dispatch(asyncDeletehandler(id));
-    navigate("/products");
+    navigate("/");
   };
 
   if (!product) {
@@ -54,9 +64,10 @@ const ProductDetails = () => {
     );
   }
 
-  return product ? (
+  return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center p-8">
       <div className="bg-white shadow-md rounded-lg p-8 w-full max-w-4xl flex flex-col md:flex-row">
+        {/* Image Section */}
         <div className="md:w-1/2 flex justify-center items-center">
           <img
             src={product.image}
@@ -65,6 +76,7 @@ const ProductDetails = () => {
           />
         </div>
 
+        {/* Product Info Section */}
         <div className="md:w-1/2 md:pl-10 mt-6 md:mt-0">
           <h1 className="text-3xl font-bold text-gray-800 mb-4">
             {product.title}
@@ -78,10 +90,12 @@ const ProductDetails = () => {
           <p className="text-sm text-gray-500 mb-4">
             <span className="font-semibold">Category:</span> {product.category}
           </p>
-          <button className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors text-lg font-medium">
+          <button onClick={() => addtoCartHandler(product)} className="w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 transition-colors text-lg font-medium">
             Add to Cart
           </button>
         </div>
+
+        {/* Admin Controls */}
         {users && users?.isAdmin && (
           <form
             onSubmit={handleSubmit(updateProductHandler)}
@@ -90,11 +104,14 @@ const ProductDetails = () => {
             <div className="space-y-2">
               <label className="text-sm font-medium text-gray-700">Title</label>
               <input
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md"
                 type="text"
                 placeholder="Enter product title"
-                {...register("title")}
+                {...register("title", { required: true })}
               />
+              {errors.title && (
+                <p className="text-red-500 text-sm">Title is required</p>
+              )}
             </div>
 
             <div className="space-y-2">
@@ -102,12 +119,15 @@ const ProductDetails = () => {
                 Price ($)
               </label>
               <input
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md"
                 type="number"
                 step="0.01"
                 placeholder="Enter price"
-                {...register("price")}
+                {...register("price", { required: true })}
               />
+              {errors.price && (
+                <p className="text-red-500 text-sm">Price is required</p>
+              )}
             </div>
 
             <div className="space-y-2">
@@ -115,10 +135,13 @@ const ProductDetails = () => {
                 Description
               </label>
               <textarea
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md"
                 placeholder="Enter product description"
-                {...register("description")}
+                {...register("description", { required: true })}
               />
+              {errors.description && (
+                <p className="text-red-500 text-sm">Description is required</p>
+              )}
             </div>
 
             <div className="space-y-2">
@@ -126,11 +149,14 @@ const ProductDetails = () => {
                 Category
               </label>
               <input
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md"
                 type="text"
                 placeholder="Enter category"
-                {...register("category")}
+                {...register("category", { required: true })}
               />
+              {errors.category && (
+                <p className="text-red-500 text-sm">Category is required</p>
+              )}
             </div>
 
             <div className="space-y-2">
@@ -138,32 +164,35 @@ const ProductDetails = () => {
                 Image URL
               </label>
               <input
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md"
                 type="url"
                 placeholder="Enter image URL"
-                {...register("image")}
+                {...register("image", { required: true })}
               />
+              {errors.image && (
+                <p className="text-red-500 text-sm">Image URL is required</p>
+              )}
             </div>
 
             <button
               type="submit"
-              className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors duration-200 font-medium"
+              className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition duration-200 font-medium"
             >
               Update Product
             </button>
+
             <button
-              onClick={deleteHandeler}
-              type="submit"
-              className="w-full bg-red-600 text-white py-2 px-4 rounded-md hover:bg-red-800 transition-colors duration-200 font-medium"
+              type="button"
+              onClick={deleteHandler}
+              className="w-full bg-red-600 text-white py-2 px-4 rounded-md hover:bg-red-800 transition duration-200 font-medium"
             >
               Delete
             </button>
+
           </form>
         )}
       </div>
     </div>
-  ) : (
-    "...loading"
   );
 };
 

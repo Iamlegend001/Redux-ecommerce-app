@@ -66,6 +66,16 @@ const Navbar = () => {
                 >
                   Settings
                 </NavLink>
+                <NavLink
+                  to="/cart"
+                  className={({ isActive }) =>
+                    `text-gray-100 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
+                      isActive ? "bg-gray-700 shadow-inner" : ""
+                    }`
+                  }
+                >
+                  Carts
+                </NavLink>
                 {/* <button onClick={LogoutHandler} className="text-white">
                   Logout
                 </button> */}
