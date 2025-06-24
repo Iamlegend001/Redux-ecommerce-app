@@ -11,14 +11,14 @@
       "cart": [
         {
           "product": {
-            "id": "SE9qeauIOtqF2b9XYz2QC",
-            "title": " HP Omen 16 Max, Intel Core Ultra 9 275HX processor,16GB NVIDIA RTX 5080 Gaming AI",
-            "price": "3500",
-            "description": "24-core, 24-thread CPU with 36MB L3 cache. Turbo up to 5.4GHz. Delivers elite multitasking, real-time AI acceleration, and lightning-fast responsiveness for AAA gaming, 3D rendering, and demanding creative workflows.",
-            "category": "Laptop",
-            "image": "https://m.media-amazon.com/images/I/71UmfFG5RAL._SL1500_.jpg"
+            "id": "2",
+            "title": "Smartphone Case with Card Holder",
+            "price": 15.99,
+            "description": "Durable phone case with built-in card slots and kickstand feature",
+            "category": "Electronics",
+            "image": "https://images.meesho.com/images/products/123456789/abc123_1200.jpg"
           },
-          "quantity": 2
+          "quantity": 5
         }
       ]
     },
@@ -47,6 +47,334 @@
       "description": "24-core, 24-thread CPU with 36MB L3 cache. Turbo up to 5.4GHz. Delivers elite multitasking, real-time AI acceleration, and lightning-fast responsiveness for AAA gaming, 3D rendering, and demanding creative workflows.",
       "category": "Laptop",
       "image": "https://m.media-amazon.com/images/I/71UmfFG5RAL._SL1500_.jpg"
+    },
+    {
+      "id": "OASBDk2kSM5Ij2sYIn9Sh",
+      "title": "ASUS ROG Strix G16,Intel Core Ultra 9 275HX Gaming Laptop",
+      "price": "2500",
+      "description": "Processor : Intel Core Ultra 9 Processor 275HX 2.7 GHz (36MB Cache, up to 5.4 GHz, 24 cores, 24 Threads); Intel AI Boost NPU up to 13TOPS\nDisplay : 16-inch, FHD+ 16:10 (1920 x 1200, WUXGA), 165Hz Refresh Rate, 300nits Brightness | Keyboard : Backlit Chiclet Keyboard 4-Zone RGB with Copilot key",
+      "category": "Laptop",
+      "image": "https://m.media-amazon.com/images/I/81DG4kEeiIL._SX679_.jpg"
+    },
+    {
+      "id": "1",
+      "title": "Wireless Bluetooth Headphones",
+      "price": 49.99,
+      "description": "High-quality wireless headphones with noise cancellation and long battery life",
+      "category": "Electronics",
+      "image": "https://images.meesho.com/images/products/441972461/wqvne_1200.jpg"
+    },
+    {
+      "id": "2",
+      "title": "Smartphone Case with Card Holder",
+      "price": 15.99,
+      "description": "Durable phone case with built-in card slots and kickstand feature",
+      "category": "Electronics",
+      "image": "https://images.meesho.com/images/products/123456789/abc123_1200.jpg"
+    },
+    {
+      "id": "3",
+      "title": "LED Desk Lamp",
+      "price": 29.99,
+      "description": "Adjustable LED desk lamp with touch control and USB charging port",
+      "category": "Home & Garden",
+      "image": "https://images.meesho.com/images/products/234567890/def456_1200.jpg"
+    },
+    {
+      "id": "4",
+      "title": "Cotton T-Shirt Pack",
+      "price": 24.99,
+      "description": "Pack of 3 premium cotton t-shirts in assorted colors",
+      "category": "Clothing",
+      "image": "https://images.meesho.com/images/products/345678901/ghi789_1200.jpg"
+    },
+    {
+      "id": "5",
+      "title": "Stainless Steel Water Bottle",
+      "price": 18.99,
+      "description": "Insulated water bottle keeps drinks cold for 24hrs, hot for 12hrs",
+      "category": "Sports & Outdoors",
+      "image": "https://images.meesho.com/images/products/456789012/jkl012_1200.jpg"
+    },
+    {
+      "id": "6",
+      "title": "Wireless Phone Charger",
+      "price": 22.99,
+      "description": "Fast wireless charging pad compatible with all Qi-enabled devices",
+      "category": "Electronics",
+      "image": "https://images.meesho.com/images/products/567890123/mno345_1200.jpg"
+    },
+    {
+      "id": "7",
+      "title": "Kitchen Knife Set",
+      "price": 39.99,
+      "description": "Professional 5-piece knife set with wooden block holder",
+      "category": "Home & Kitchen",
+      "image": "https://images.meesho.com/images/products/678901234/pqr678_1200.jpg"
+    },
+    {
+      "id": "8",
+      "title": "Yoga Mat Premium",
+      "price": 32.99,
+      "description": "Non-slip yoga mat with carrying strap and alignment guides",
+      "category": "Sports & Fitness",
+      "image": "https://images.meesho.com/images/products/789012345/stu901_1200.jpg"
+    },
+    {
+      "id": "9",
+      "title": "Leather Wallet",
+      "price": 27.99,
+      "description": "Genuine leather bifold wallet with RFID blocking technology",
+      "category": "Accessories",
+      "image": "https://images.meesho.com/images/products/890123456/vwx234_1200.jpg"
+    },
+    {
+      "id": "10",
+      "title": "Bluetooth Speaker",
+      "price": 35.99,
+      "description": "Portable waterproof speaker with 360-degree sound and 10-hour battery",
+      "category": "Electronics",
+      "image": "https://images.meesho.com/images/products/901234567/yzab567_1200.jpg"
+    },
+    {
+      "id": "11",
+      "title": "Running Shoes",
+      "price": 68.99,
+      "description": "Lightweight running shoes with breathable mesh and cushioned sole",
+      "category": "Footwear",
+      "image": "https://images.meesho.com/images/products/012345678/cdef890_1200.jpg"
+    },
+    {
+      "id": "12",
+      "title": "Coffee Maker",
+      "price": 89.99,
+      "description": "Programmable drip coffee maker with thermal carafe and auto shut-off",
+      "category": "Home & Kitchen",
+      "image": "https://images.meesho.com/images/products/123456780/ghij123_1200.jpg"
+    },
+    {
+      "id": "13",
+      "title": "Backpack Laptop",
+      "price": 42.99,
+      "description": "Water-resistant laptop backpack with multiple compartments and USB port",
+      "category": "Bags & Luggage",
+      "image": "https://images.meesho.com/images/products/234567891/klmn456_1200.jpg"
+    },
+    {
+      "id": "14",
+      "title": "Sunglasses Polarized",
+      "price": 25.99,
+      "description": "UV protection polarized sunglasses with lightweight frame",
+      "category": "Accessories",
+      "image": "https://images.meesho.com/images/products/345678902/opqr789_1200.jpg"
+    },
+    {
+      "id": "15",
+      "title": "Air Purifier",
+      "price": 129.99,
+      "description": "HEPA air purifier with smart controls and air quality indicator",
+      "category": "Home & Garden",
+      "image": "https://images.meesho.com/images/products/456789013/stuv012_1200.jpg"
+    },
+    {
+      "id": "16",
+      "title": "Gaming Mouse",
+      "price": 34.99,
+      "description": "RGB gaming mouse with programmable buttons and high DPI sensor",
+      "category": "Electronics",
+      "image": "https://images.meesho.com/images/products/567890124/wxyz345_1200.jpg"
+    },
+    {
+      "id": "17",
+      "title": "Denim Jeans",
+      "price": 45.99,
+      "description": "Classic fit denim jeans with stretch fabric and fade-resistant color",
+      "category": "Clothing",
+      "image": "https://images.meesho.com/images/products/678901235/abcd678_1200.jpg"
+    },
+    {
+      "id": "18",
+      "title": "Essential Oil Diffuser",
+      "price": 28.99,
+      "description": "Ultrasonic aromatherapy diffuser with LED lights and timer settings",
+      "category": "Health & Beauty",
+      "image": "https://images.meesho.com/images/products/789012346/efgh901_1200.jpg"
+    },
+    {
+      "id": "19",
+      "title": "Resistance Bands Set",
+      "price": 19.99,
+      "description": "Complete resistance band set with handles, door anchor, and workout guide",
+      "category": "Sports & Fitness",
+      "image": "https://images.meesho.com/images/products/890123457/ijkl234_1200.jpg"
+    },
+    {
+      "id": "20",
+      "title": "Ceramic Dinner Plates",
+      "price": 36.99,
+      "description": "Set of 6 ceramic dinner plates, dishwasher and microwave safe",
+      "category": "Home & Kitchen",
+      "image": "https://images.meesho.com/images/products/901234568/mnop567_1200.jpg"
+    },
+    {
+      "id": "21",
+      "title": "Wireless Earbuds",
+      "price": 79.99,
+      "description": "True wireless earbuds with active noise cancellation and wireless charging case",
+      "category": "Electronics",
+      "image": "https://images.meesho.com/images/products/012345679/qrst890_1200.jpg"
+    },
+    {
+      "id": "22",
+      "title": "Canvas Sneakers",
+      "price": 29.99,
+      "description": "Classic canvas sneakers with rubber sole and multiple color options",
+      "category": "Footwear",
+      "image": "https://images.meesho.com/images/products/123456781/uvwx123_1200.jpg"
+    },
+    {
+      "id": "23",
+      "title": "Electric Kettle",
+      "price": 31.99,
+      "description": "Fast-boiling electric kettle with temperature control and keep-warm function",
+      "category": "Home & Kitchen",
+      "image": "https://images.meesho.com/images/products/234567892/yzab456_1200.jpg"
+    },
+    {
+      "id": "24",
+      "title": "Face Moisturizer",
+      "price": 16.99,
+      "description": "Hydrating face moisturizer with SPF 30 and anti-aging ingredients",
+      "category": "Health & Beauty",
+      "image": "https://images.meesho.com/images/products/345678903/cdef789_1200.jpg"
+    },
+    {
+      "id": "25",
+      "title": "Mechanical Keyboard",
+      "price": 89.99,
+      "description": "RGB mechanical keyboard with blue switches and programmable keys",
+      "category": "Electronics",
+      "image": "https://images.meesho.com/images/products/456789014/ghij012_1200.jpg"
+    },
+    {
+      "id": "26",
+      "title": "Travel Duffel Bag",
+      "price": 54.99,
+      "description": "Large capacity travel bag with separate shoe compartment and shoulder strap",
+      "category": "Bags & Luggage",
+      "image": "https://images.meesho.com/images/products/567890125/klmn345_1200.jpg"
+    },
+    {
+      "id": "27",
+      "title": "Smart Watch",
+      "price": 149.99,
+      "description": "Fitness tracking smartwatch with heart rate monitor and GPS",
+      "category": "Electronics",
+      "image": "https://images.meesho.com/images/products/678901236/opqr678_1200.jpg"
+    },
+    {
+      "id": "28",
+      "title": "Hoodie Sweatshirt",
+      "price": 38.99,
+      "description": "Comfortable cotton blend hoodie with kangaroo pocket and drawstring hood",
+      "category": "Clothing",
+      "image": "https://images.meesho.com/images/products/789012347/stuv901_1200.jpg"
+    },
+    {
+      "id": "29",
+      "title": "Blender High-Speed",
+      "price": 99.99,
+      "description": "Professional blender with multiple speed settings and self-cleaning function",
+      "category": "Home & Kitchen",
+      "image": "https://images.meesho.com/images/products/890123458/wxyz234_1200.jpg"
+    },
+    {
+      "id": "30",
+      "title": "Reading Glasses",
+      "price": 12.99,
+      "description": "Blue light blocking reading glasses with anti-glare coating",
+      "category": "Accessories",
+      "image": "https://images.meesho.com/images/products/901234569/abcd567_1200.jpg"
+    },
+    {
+      "id": "31",
+      "title": "Shower Curtain",
+      "price": 21.99,
+      "description": "Waterproof shower curtain with modern design and rust-resistant grommets",
+      "category": "Home & Garden",
+      "image": "https://images.meesho.com/images/products/012345680/efgh890_1200.jpg"
+    },
+    {
+      "id": "32",
+      "title": "Protein Powder",
+      "price": 44.99,
+      "description": "Whey protein powder with 25g protein per serving, vanilla flavor",
+      "category": "Health & Beauty",
+      "image": "https://images.meesho.com/images/products/123456782/ijkl123_1200.jpg"
+    },
+    {
+      "id": "33",
+      "title": "Car Phone Mount",
+      "price": 17.99,
+      "description": "Magnetic car phone holder with 360-degree rotation and secure grip",
+      "category": "Automotive",
+      "image": "https://images.meesho.com/images/products/234567893/mnop456_1200.jpg"
+    },
+    {
+      "id": "34",
+      "title": "Wall Clock",
+      "price": 23.99,
+      "description": "Silent wall clock with modern design and easy-to-read numbers",
+      "category": "Home & Garden",
+      "image": "https://images.meesho.com/images/products/345678904/qrst789_1200.jpg"
+    },
+    {
+      "id": "35",
+      "title": "Laptop Stand",
+      "price": 26.99,
+      "description": "Adjustable aluminum laptop stand with cooling vents and ergonomic design",
+      "category": "Electronics",
+      "image": "https://images.meesho.com/images/products/456789015/uvwx012_1200.jpg"
+    },
+    {
+      "id": "36",
+      "title": "Bath Towel Set",
+      "price": 33.99,
+      "description": "Set of 4 absorbent cotton bath towels in neutral colors",
+      "category": "Home & Garden",
+      "image": "https://images.meesho.com/images/products/567890126/yzab345_1200.jpg"
+    },
+    {
+      "id": "37",
+      "title": "Camping Tent",
+      "price": 119.99,
+      "description": "4-person waterproof camping tent with easy setup and ventilation windows",
+      "category": "Sports & Outdoors",
+      "image": "https://images.meesho.com/images/products/678901237/cdef678_1200.jpg"
+    },
+    {
+      "id": "38",
+      "title": "Wireless Charger Stand",
+      "price": 24.99,
+      "description": "Qi wireless charging stand with adjustable angle for phones and earbuds",
+      "category": "Electronics",
+      "image": "https://images.meesho.com/images/products/789012348/ghij901_1200.jpg"
+    },
+    {
+      "id": "39",
+      "title": "Skincare Set",
+      "price": 52.99,
+      "description": "Complete skincare routine set with cleanser, toner, serum, and moisturizer",
+      "category": "Health & Beauty",
+      "image": "https://images.meesho.com/images/products/890123459/klmn234_1200.jpg"
+    },
+    {
+      "id": "40",
+      "title": "Desk Organizer",
+      "price": 19.99,
+      "description": "Bamboo desk organizer with multiple compartments for office supplies",
+      "category": "Office Supplies",
+      "image": "https://images.meesho.com/images/products/901234570/opqr567_1200.jpg"
     }
   ],
   "carts": {
