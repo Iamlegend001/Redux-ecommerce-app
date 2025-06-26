@@ -8,19 +8,7 @@
       "isAdmin": true,
       "users": null,
       "Username": "admin",
-      "cart": [
-        {
-          "product": {
-            "id": "2",
-            "title": "Smartphone Case with Card Holder",
-            "price": 15.99,
-            "description": "Durable phone case with built-in card slots and kickstand feature",
-            "category": "Electronics",
-            "image": "https://images.meesho.com/images/products/123456789/abc123_1200.jpg"
-          },
-          "quantity": 5
-        }
-      ]
+      "cart": []
     },
     {
       "id": "NanMHuJbzRLMrixjTihnQ",

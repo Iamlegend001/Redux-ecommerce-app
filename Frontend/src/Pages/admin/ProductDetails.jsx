@@ -53,7 +53,7 @@ const ProductDetails = () => {
 
   const deleteHandler = () => {
     dispatch(asyncDeletehandler(id));
-    navigate("/");
+    navigate("/products");
   };
 
   if (!product) {

@@ -3,7 +3,7 @@ import Navbar from "./Components/Navbar.jsx";
 import MainRoutes from "./Routes/MainRoutes.jsx";
 import { asynCurrentuser } from "./Store/Actions/userActions.jsx";
 import { useDispatch, useSelector } from "react-redux";
-import { asyncLoadProducts } from "./Store/Actions/productActions.jsx";
+// import { asyncLoadProducts } from "./Store/Actions/productActions.jsx";
 
 const App = () => {
   const dispatch = useDispatch();
@@ -13,9 +13,9 @@ const App = () => {
   useEffect(() => {
     !users && dispatch(asynCurrentuser());
   }, [users]);
-  useEffect(() => {
-    products.length == 0 && dispatch(asyncLoadProducts());
-  }, [products]);
+  // useEffect(() => {
+  //   products.length == 0 && dispatch(asyncLoadProducts());
+  // }, [products]);
   return (
     <div className="min-h-screen bg-gray-100">
       <Navbar />

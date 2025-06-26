@@ -19,7 +19,7 @@ const Login = () => {
     reset();
     dispatch(asynLoginuser(user));
 
-    navigate('/')
+    navigate('/products')
   };
 
   return (

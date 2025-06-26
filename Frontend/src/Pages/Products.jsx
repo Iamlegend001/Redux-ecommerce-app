@@ -1,34 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useSelector } from "react-redux";
 import ProductCard from "../Components/ProductCard";
-import axios from "../api/axiosConfig";
 import InfiniteScroll from "react-infinite-scroll-component";
+import useInfiniteProducts from "../Utils/useInfiniteProducts";
 
 const Products = () => {
   const users = useSelector((state) => state.userReducers.users);
-  const [products, setProducts] = useState([]);
-  const [hasMore, setHasMore] = useState(true);
-  const [start, setStart] = useState(0);
-  const LIMIT = 6;
-
-  const fetchProducts = async () => {
-    try {
-      const { data } = await axios.get(`/products?_start=${start}&_limit=${LIMIT}`);
-      if (data.length === 0) {
-        setHasMore(false);
-        return;
-      }
-
-      setProducts((prev) => [...prev, ...data]);
-      setStart((prev) => prev + LIMIT);
-    } catch (error) {
-      console.error("Error fetching products:", error);
-    }
-  };
-
-  useEffect(() => {
-    fetchProducts();
-  }, []);
+  const { products, fetchProducts, hasMore } = useInfiniteProducts(); // ✅ Only this
 
   const renderProductsSection = () => {
     return (
